@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction - Light Blue & Dark Theme</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Background and Font Colors */
+    body {
+      background-color: #f0f8ff; /* Light blue background */
+      color: #333; /* Dark text */
+    }
+
+    /* Navbar Styling */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #003366; /* Dark blue */
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    header img {
+      width: 50px;
+      height: auto;
+    }
+    header h1 {
+      color: #add8e6; /* Light blue */
+      margin-left: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav a {
+      color: #add8e6; /* Light blue */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffffff; /* White on hover */
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+      url('image1.jpg') no-repeat center center/cover;
+      color: #f0f8ff; /* Light blue text */
+      text-align: center;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease;
+    }
+    .content h2 {
+      font-size: 3rem;
+      color: #add8e6; /* Light blue */
+      margin-bottom: 1rem;
+    }
+    .content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .predict-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background-color: #003366; /* Dark blue */
+      color: #f0f8ff; /* Light blue text */
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .predict-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 51, 102, 0.3);
+    }
+
+    /* Info Section with Images */
+    .info-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 3rem;
+      background-color: #e0f2ff; /* Very light blue */
+      color: #333; /* Dark text */
+    }
+    .info-section img {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .info-section img:hover {
+      transform: scale(1.05);
+    }
+    .info-text h3 {
+      color: #003366; /* Dark blue */
+      margin-bottom: 1rem;
+    }
+    .info-text p {
+      line-height: 1.6;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://img.icons8.com/?size=100&id=14857&format=png&color=000000" alt="Healthcare Logo">
+      <h1>HealthCare Center</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="content">
+      <h2>Diabetes Prediction System</h2>
+      <p>Empowering you with early detection for better health.</p>
+      <a href="/predict" class="predict-btn">Predict Diabetes</a>
+    </div>
+  </section>
+
+  <!-- Info Section with Images -->
+  <section class="info-section">
+    <img src="https://img.icons8.com/?size=100&id=14857&format=png&color=000000" alt="Doctor holding tablet with diabetes info">
+    <div class="info-text">
+      <h3>Why Early Diabetes Prediction Matters</h3>
+      <p>
+        Early detection of diabetes can make a significant difference in managing health and reducing the risks associated with this condition. 
+        Our predictive tools help you take control of your health early, giving you the best chances for a better quality of life.
+      </p>
+    </div>
+  </section>
+  
+</body>
+</html>

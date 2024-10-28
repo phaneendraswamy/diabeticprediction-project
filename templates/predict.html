@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction - User Input</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar Styling */
+    header {
+      background-color: #008080;
+      padding: 0.5rem; /* Reduced padding */
+      text-align: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 1.25rem; /* Smaller title font */
+      display: inline-block;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem; /* Reduced gap */
+    }
+    nav a {
+      color: #fff;
+      font-size: 1rem; /* Smaller link font */
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcccb;
+    }
+
+    /* Form Section Styling */
+    .form-section {
+      height: 120vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 1.5rem; /* Reduced padding */
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px; /* Smaller max width */
+      text-align: center;
+    }
+    .form-container h2 {
+      font-size: 1.5rem; /* Smaller heading font */
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .form-container label {
+      display: block;
+      text-align: left;
+      margin-top: 0.8rem; /* Smaller margin */
+      font-size: 1rem; /* Smaller label font */
+      font-weight: bold;
+      color: #555;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 0.5rem; /* Smaller padding */
+      margin-top: 0.3rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem; /* Smaller input font */
+    }
+    .submit-btn {
+      margin-top: 1rem; /* Reduced margin */
+      padding: 0.8rem 1.5rem; /* Smaller button padding */
+      font-size: 1rem; /* Smaller button font */
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .submit-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 128, 128, 0.2);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>HealthCare Center</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Enter Your Health Information</h2>
+      <form action="/predict" method="POST">
+        <label for="pregnancies">Pregnancies</label>
+        <input type="number" id="pregnancies" name="pregnancies" required>
+
+        <label for="glucose">Glucose</label>
+        <input type="number" id="glucose" name="glucose" required>
+
+        <label for="blood_pressure">Blood Pressure</label>
+        <input type="number" id="blood_pressure" name="blood_pressure" required>
+
+        <label for="skin_thickness">Skin Thickness</label>
+        <input type="number" id="skin_thickness" name="skin_thickness" required>
+
+        <label for="insulin">Insulin</label>
+        <input type="number" id="insulin" name="insulin" required>
+
+        <label for="bmi">BMI</label>
+        <input type="number" step="0.1" id="bmi" name="bmi" required>
+
+        <label for="diabetes_pedigree_function">Diabetes Pedigree Function</label>
+        <input type="number" step="0.01" id="diabetes_pedigree_function" name="diabetes_pedigree_function" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
